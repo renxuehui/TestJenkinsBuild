@@ -18,13 +18,17 @@
   <build>
     <finalName>TestBuildWeb</finalName>
     <plugins>
-    <plugin>
-    <artifactId>maven-war-plugin</artifactId>
-	    <configuration>
-	    	<warSourceDirectory>WebRoot</warSourceDirectory>
-	        <failOnMissingWebXml>false</failOnMissingWebXml>
-	    </configuration>
-    </plugin>
+	    <plugin>
+	    	<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-war-plugin</artifactId>
+			<version>2.4</version>
+			<configuration>
+				<!--指定web.xml文件的位置-->
+				<webXml>webRoot\WEB-INF\web.xml</webXml>
+				<!--指定jsp等文件所在位置-->   
+				<warSourceDirectory>webRoot</warSourceDirectory>
+			</configuration>
+	    </plugin>
     </plugins>
   </build>
 </project>
